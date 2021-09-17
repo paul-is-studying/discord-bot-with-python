@@ -8,5 +8,15 @@ async def on_ready():
     print(client.user)
     print("=========================")
 
+@client.event
+async def on_message(message):
+    if message.content == "Hey": #when the user says "hey"
+        await message.channel.send("Wut") #then answer with "Wut"
+    
+    if message.content == "was": #same as above
+        await message.channel.send("sup") 
+
+
+
 client.run(token)
 
