@@ -1,5 +1,5 @@
 import discord #import the Discord's module
-token = "token" #Get the bot's token to run it.
+token = "ODg4MzMzNzQzMTMwMDI2MDA1.YURLRA.1PfzHqtvexJHqbLiCvk767sgV8I" #Get the bot's token to run it.
 client = discord.Client() #setup client
 
 @client.event
@@ -32,12 +32,12 @@ async def on_message(message):
         embed.set_footer(text="Simple Footer.")
         embed.set_image(url="https://cdn.discordapp.com/avatars/627292715956043785/f72916a9f5c728c0f69cba48a6a63488.webp?size=1024")
         embed.set_thumbnail(url="https://cdn.discordapp.com/icons/645137556777992203/81dad01e48347b548e6f4530c1a0c3ef.webp?size=1024")
-        embed.set_author(name="Author Name", icon_url="https://cdn.discordapp.com/attachments/520265639680671747/533389224913797122/rtgang.jpeg")
+        embed.set_author(name="Author Name", icon_url="https://cdn.discordapp.com/avatars/627292715956043785/f72916a9f5c728c0f69cba48a6a63488.webp?size=1024")
         embed.add_field(name="Field Name", value="Field Value", inline=False)
         embed.add_field(name="Inline Field_1", value="A simple field value for inline embed", inline=True)
         embed.add_field(name="Inline Field_2", value="Another simple field value for another inline embed", inline=True)
 
-        await client.send_message(message.channel, embed=embed)
+        await message.channel.send(embed=embed)
 
 client.run(token)
 
