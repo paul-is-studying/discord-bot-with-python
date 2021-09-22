@@ -1,6 +1,10 @@
 import discord #import the Discord's module
-token = "ODg4MzMzNzQzMTMwMDI2MDA1.YURLRA.1PfzHqtvexJHqbLiCvk767sgV8I" #Get the bot's token to run it.
 client = discord.Client() #setup client
+
+f = open("token.txt", 'r')
+token = f.read()
+f.close()
+
 
 @client.event
 async def on_ready():
